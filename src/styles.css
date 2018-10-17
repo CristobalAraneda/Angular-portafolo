@@ -1,6 +1,11 @@
 
 /* You can add global styles to this file, and also import other style files */
-
+/* SVG Animacion */
+svg path,
+svg rect{
+  fill: black;
+}
+/* Animaciones */
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
