@@ -22,7 +22,8 @@ export class ProductosService {
       this.http.get('https://angular-html-88af2.firebaseio.com/productos_idx.json')
       .subscribe((resp: Producto[]) => {
         this.productos = resp;
-        this.cargando = true;
+        console.log(resp);
+        this.cargando = false;
         resolve();
     });
 
@@ -42,7 +43,6 @@ export class ProductosService {
       this.filtrarProductos(termino);
 
     }
-      // this.filtrarProductos(termino)
   }
 
    private filtrarProductos( termino: string ) {
