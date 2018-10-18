@@ -9,15 +9,15 @@ import { ProductosService } from 'src/app/service/productos.service';
 })
 export class SeachComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
               public productoService: ProductosService) { }
 
   ngOnInit() {
 
-    this.router.params
+    this.route.params
          .subscribe( params => {
-          //  console.log(params['termino']);
-           this.productoService.buscarProducto( params['termino']);
+           console.log(params['termino']);
+          this.productoService.buscarProducto( params['termino']);
          });
   }
 

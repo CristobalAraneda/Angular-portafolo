@@ -16,11 +16,10 @@ export class HeaderComponent implements OnInit {
   }
   buscarProducto(termino: string) {
 
-    if ( termino.length < 1) {
-      return;
+     if ( termino.length < 1) {
+     return;
     }
-    this.router.navigate(['seach', termino]);
-    // console.log(termino);
+     this.router.navigate(['/seach', termino]);
   }
 
 }
